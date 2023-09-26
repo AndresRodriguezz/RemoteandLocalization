@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -69,5 +70,8 @@ dependencies {
 
     // Coil(images)
     implementation("io.coil-kt:coil:2.4.0")
+
+    // Paging 3.0
+    implementation ("androidx.paging:paging-runtime:3.2.1")
 
 }

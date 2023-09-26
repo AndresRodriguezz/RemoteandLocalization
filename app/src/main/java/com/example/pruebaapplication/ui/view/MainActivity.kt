@@ -1,4 +1,4 @@
-package com.example.pruebaapplication.ui
+package com.example.pruebaapplication.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -37,11 +37,5 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.map.setOnClickListener {
-            navController.navigate(R.id.action_HomeFragment_to_DetailFragment)
-        }
     }
-
-
 }

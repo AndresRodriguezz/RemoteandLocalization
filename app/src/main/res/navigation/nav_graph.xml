@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/HomeFragment"
-        android:name="com.example.pruebaapplication.ui.HomeFragment"
+        android:name="com.example.pruebaapplication.ui.view.HomeFragment"
         android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -18,10 +18,9 @@
 
     <fragment
         android:id="@+id/DetailFragment"
-        android:name="com.example.pruebaapplication.ui.DetailFragment"
+        android:name="com.example.pruebaapplication.ui.view.DetailFragment"
         android:label="@string/detail_fragment_label"
         tools:layout="@layout/fragment_detail">
-
         <action
             android:id="@+id/action_DetailFragment_to_HomeFragment"
             app:destination="@id/HomeFragment" />

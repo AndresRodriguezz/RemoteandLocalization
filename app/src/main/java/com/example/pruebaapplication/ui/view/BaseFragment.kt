@@ -1,4 +1,4 @@
-package com.example.pruebaapplication.ui
+package com.example.pruebaapplication.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,13 +18,13 @@ abstract class BaseFragment<out T : ViewBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = bindingInflater(inflater) // Inflates the view
+        _binding = bindingInflater(inflater)
         return _binding?.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Clear the reference to the View Binding instance
+        _binding = null
     }
 
     protected abstract val bindingInflater: (LayoutInflater) -> T
