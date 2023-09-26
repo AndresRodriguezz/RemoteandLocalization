@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
-    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -43,8 +43,9 @@ android {
 
 dependencies {
     val nav_version = "2.6.0"
-    val hilt_vertsion = "2.48"
+    val hilt_version = "2.48"
     val retrofit_version = "2.9.0"
+    val room_version = "2.4.2"
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -59,10 +60,10 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     //DaggerHilt
-    implementation("com.google.dagger:hilt-android:$hilt_vertsion")
-    kapt("com.google.dagger:hilt-compiler:$hilt_vertsion")
-    androidTestImplementation("com.google.dagger:hilt-android-testing:$hilt_vertsion")
-    kaptAndroidTest("com.google.dagger:hilt-android-compiler:$hilt_vertsion")
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-compiler:$hilt_version")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:$hilt_version")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
@@ -73,5 +74,10 @@ dependencies {
 
     // Paging 3.0
     implementation ("androidx.paging:paging-runtime:3.2.1")
+
+    //Room
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+
 
 }

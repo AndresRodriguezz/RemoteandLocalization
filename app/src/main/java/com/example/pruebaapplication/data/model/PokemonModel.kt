@@ -1,5 +1,6 @@
 package com.example.pruebaapplication.data.model
 
+import com.example.pruebaapplication.data.database.entities.PokemonEntity
 import com.example.pruebaapplication.data.util.Constants.BASE_URL_IMAGE
 import com.example.pruebaapplication.data.util.Constants.IMAGE_EXT
 import com.example.pruebaapplication.data.util.Constants.LAST_CHARACTER
@@ -19,5 +20,9 @@ data class PokemonModel(
         return BASE_URL_IMAGE + index + IMAGE_EXT
     }
     fun getId(): Int = url.split(SLASH.toRegex()).dropLast(LAST_CHARACTER).last().toInt()
-
 }
+
+fun PokemonEntity.toPokemonModel() = PokemonModel(
+    name = name,
+    url = url,
+)

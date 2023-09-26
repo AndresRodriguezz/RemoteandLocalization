@@ -25,4 +25,7 @@ object Constants {
     const val PARAM_PREVIOUS  = "previous"
     const val PARAM_RESULTS = "results"
     const val PARAM_NEXT = "next"
+
+    const val DATABASE_VERSION = 1
+    const val DATABASE_NAME = "pokemon_database"
 }
