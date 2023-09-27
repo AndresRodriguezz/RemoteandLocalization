@@ -1,4 +1,4 @@
-package com.example.pruebaapplication.paging
+package com.example.pruebaapplication.domain.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

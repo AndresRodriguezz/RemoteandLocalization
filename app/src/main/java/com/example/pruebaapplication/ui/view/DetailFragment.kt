@@ -6,12 +6,13 @@ import android.view.View
 import android.view.View.GONE
 import androidx.fragment.app.viewModels
 import coil.load
+import com.example.core.BaseFragment
 import com.example.pruebaapplication.R
 import com.example.pruebaapplication.databinding.FragmentDetailBinding
 import com.example.pruebaapplication.domain.model.PokemonDetail
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_ID
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_IMAGE_URL
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_NAME
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_ID
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_IMAGE_URL
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_NAME
 import com.example.pruebaapplication.ui.viewmodel.PokemonDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

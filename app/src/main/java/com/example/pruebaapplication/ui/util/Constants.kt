@@ -1,4 +1,4 @@
-package com.example.pruebaapplication.ui.view.utils
+package com.example.pruebaapplication.ui.util
 
 object Constants {
     const val ARGUMENT_ID = "id"

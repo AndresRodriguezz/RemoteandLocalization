@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "PruebaApplication"
 include(":app")
- 
+include(":mylocations")
+include(":core")

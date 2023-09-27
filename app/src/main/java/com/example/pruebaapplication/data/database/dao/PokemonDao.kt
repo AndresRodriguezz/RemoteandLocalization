@@ -15,7 +15,6 @@ interface PokemonDao {
 
     @Query("SELECT * FROM pokemon")
     fun getAllPokemon(): LiveData<List<PokemonEntity>>
-
 }
 
 @Dao

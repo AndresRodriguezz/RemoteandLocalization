@@ -10,7 +10,7 @@ import com.example.pruebaapplication.data.network.PokemonClient
 import com.example.pruebaapplication.data.util.Constants.DEFAULT_PAGE_SIZE
 import com.example.pruebaapplication.data.util.Constants.DEFAULT_PAGING_KEY
 import com.example.pruebaapplication.domain.model.toDomain
-import com.example.pruebaapplication.paging.PokemonPagingSource
+import com.example.pruebaapplication.domain.paging.PokemonPagingSource
 import javax.inject.Inject
 
 

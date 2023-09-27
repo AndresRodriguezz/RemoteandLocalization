@@ -6,14 +6,15 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.core.BaseFragment
 import com.example.pruebaapplication.R
 import com.example.pruebaapplication.databinding.FragmentHomeBinding
 import com.example.pruebaapplication.domain.model.Pokemon
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_ID
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_IMAGE_URL
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_KEY
+import com.example.pruebaapplication.ui.util.Constants.ARGUMENT_NAME
 import com.example.pruebaapplication.ui.view.adapter.PokemonPagingAdapter
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_ID
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_IMAGE_URL
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_KEY
-import com.example.pruebaapplication.ui.view.utils.Constants.ARGUMENT_NAME
 import com.example.pruebaapplication.ui.viewmodel.PokemonViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,9 +29,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        initView()
         initAdapter()
         initObservers()
+    }
+
+    private fun initView() {
+        binding.map.setOnClickListener{
+            findNavController().navigate(R.id.action_HomeFragment_to_locationFragment)
+        }
     }
 
     private fun initAdapter() {
